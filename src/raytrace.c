@@ -1,5 +1,7 @@
-// This is a raytracer written in C.
-// This code is verrrry much based on: www.scratchapixel.com
+// Copyright (C) 2017-2018 Björn Lindqvist
+//
+// This is a raytracer written in C. The code is verrrry much based
+// on examples from www.scratchapixel.com
 #include <assert.h>
 #include <float.h>
 #include <libgen.h>

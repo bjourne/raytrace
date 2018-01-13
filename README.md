@@ -3,12 +3,19 @@ A dirt simple raytracer written in C
 
 ## Compilation
 
-The raytracer depends on my C libraries which you can download from
-this location:
+The project is built using the
+[WAF](https://github.com/waf-project/waf) tool. It requires you to
+have Python installed. It also depends on my C libraries, which you
+can download from the following location:
 
     https://github.com/bjourne/c-examples
 
-Then to compile the project, run:
+Then to configure the project, run:
+
+    $ ./waf configure
+
+The `--isect` and `--shading` options can be passed to control the
+compilation of the toy raytracer. Then build: using:
 
     $ ./waf configure build
 
