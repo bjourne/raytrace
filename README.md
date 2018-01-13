@@ -19,6 +19,17 @@ you have to specify their paths using environment variables:
         LIBRARY_PATH=$LD_LIBRARY_PATH ./waf configure build
 
 Where `prefix` is the file system prefix in which they were
-installed. If the compilation works fine, the program can then be run:
+installed.
 
-    $ LD_LIBRARY_PATH=/tmp/bl/lib ./build/rt
+## Usage
+
+If you managed to compile the program, you can run it with:
+
+    $ LD_LIBRARY_PATH=/prefix/lib ./build/rt
+    usage: raytrace mesh-file image width[0-2048] height[0-2048] scale tx ty tz
+
+Where `prefix` is the aforementioned library prefix. To actually
+render something, invoke the program like this:
+
+    $ LD_LIBRARY_PATH=/prefix/lib ./build/rt bunny.obj out.ppm 320 200 50.0 0 0 0
+    mt bunny.obj 320 200 3.86878 487
