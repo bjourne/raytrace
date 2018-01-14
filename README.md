@@ -45,12 +45,12 @@ render something, invoke the program like this:
 
 Here are some images that were rendered with the program. A head
 
-![A head](/images/head.png | width=640)
+![A head](/images/head.png)
 
 and a dinosaur
 
-![A dinosaur](/images/tyra.png | width=640)
+![A dinosaur](/images/tyra.png)
 
 and a teapot
 
-![A dinosaur](/images/teapot.png | width=640)
+![A dinosaur](/images/teapot.png)
