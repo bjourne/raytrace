@@ -17,10 +17,10 @@ Then to configure the project, run:
 The `--isect` and `--shading` options can be passed to control the
 compilation of the toy raytracer. Then build: using:
 
-    $ ./waf configure build
+    $ ./waf build
 
 If you decide to install the libraries into a non-standard location,
-you have to specify their paths using environment variables:
+you will have to specify their paths using environment variables:
 
     $ CFLAGS="-I/prefix/include" LD_LIBRARY_PATH="/prefix/lib" \
         LIBRARY_PATH=$LD_LIBRARY_PATH ./waf configure build
