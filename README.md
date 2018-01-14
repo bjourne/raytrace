@@ -45,4 +45,4 @@ render something, invoke the program like this:
 
 Here are some images that were rendered with the program:
 
-![A head](/images/head.ppm)
+![A head](/images/head.png)
