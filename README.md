@@ -40,3 +40,9 @@ render something, invoke the program like this:
 
     $ LD_LIBRARY_PATH=/prefix/lib ./build/rt bunny.obj out.ppm 320 200 50.0 0 0 0
     mt bunny.obj 320 200 3.86878 487
+
+## Images
+
+Here are some images that were rendered with the program:
+
+![A head](/images/head.ppm)
