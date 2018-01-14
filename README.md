@@ -43,6 +43,14 @@ render something, invoke the program like this:
 
 ## Images
 
-Here are some images that were rendered with the program:
+Here are some images that were rendered with the program. A head
 
-![A head](/images/head.png)
+![A head](/images/head.png | width=640)
+
+and a dinosaur
+
+![A dinosaur](/images/tyra.png | width=640)
+
+and a teapot
+
+![A dinosaur](/images/teapot.png | width=640)
