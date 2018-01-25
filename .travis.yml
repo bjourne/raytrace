@@ -1,7 +1,11 @@
 language: c
 script:
-  # I'm not sure how to do this...
+  # My raytrace project depends on my c-examples project. I'm
+  # not sure if this is the best way to handle the dependency.
   - git clone https://github.com/bjourne/c-examples
+  - cd c-examples
+  - ./waf configure --prefix=/tmp/bl
+  - ./waf build install
 
 os:
   - linux
