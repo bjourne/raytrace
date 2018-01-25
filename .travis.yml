@@ -8,8 +8,7 @@ script:
   - ./waf configure --prefix=/tmp/bl
   - ./waf build install
   - cd ..
-  - CFLAGS="-I/tmp/bl/include" LD_LIBRARY_PATH="/tmp/bl/lib" \
-    LIBRARY_PATH=$LD_LIBRARY_PATH ./waf configure build
+  - CFLAGS="-I/tmp/bl/include" LD_LIBRARY_PATH="/tmp/bl/lib" LIBRARY_PATH=$LD_LIBRARY_PATH ./waf configure build
 os:
   - linux
 compiler:
