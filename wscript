@@ -22,7 +22,7 @@ def configure(ctx):
     ctx.check(lib = 'linalg')
     ctx.check(lib = 'isect')
     ctx.check(lib = 'file3d')
-    base_flags = ['-Wall', '-Werror', '-fPIC']
+    base_flags = ['-Wall', '-Werror', '-fPIC', '-std=gnu11']
     speed_flags = ['-O3',
                    '-fomit-frame-pointer',
                    '-march=native',
