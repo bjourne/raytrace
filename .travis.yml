@@ -2,11 +2,14 @@ language: c
 script:
   # My raytrace project depends on my c-examples project. I'm
   # not sure if this is the best way to handle the dependency.
+  # But it appears to work..
   - git clone https://github.com/bjourne/c-examples
   - cd c-examples
   - ./waf configure --prefix=/tmp/bl
   - ./waf build install
-
+  - cd ..
+  - CFLAGS="-I/tmp/bl/include" LD_LIBRARY_PATH="/tmp/bl/lib" \
+    LIBRARY_PATH=$LD_LIBRARY_PATH ./waf configure build
 os:
   - linux
 compiler:
