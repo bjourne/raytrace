@@ -1,0 +1,10 @@
+language: c
+script:
+  # I'm not sure how to do this...
+  - git clone https://github.com/bjourne/c-examples
+
+os:
+  - linux
+compiler:
+  - clang
+  - gcc
