@@ -1,3 +1,4 @@
+// Copyright (C) 2019 Björn Lindqvist <bjourne@gmail.com>
 #ifndef COMMON_H
 #define COMMON_H
 
@@ -17,6 +18,7 @@
 #define PLAIN_SHADING   1
 #define FANCY_SHADING   2
 
+// true if the intersection method requires precalculations.
 #define ISECT_PC_P ISECT_METHOD == ISECT_BW9 ||                         \
         ISECT_METHOD == ISECT_BW12 ||                                   \
         ISECT_METHOD == ISECT_BW12_B ||                                 \
@@ -25,8 +27,6 @@
         ISECT_METHOD == ISECT_SHEV
 
 #if ISECT_METHOD == ISECT_MT
-    // It should be Möller, not Moller. But printf misaligns text with ö
-    // in it.
     #define ISECT_FUN isect_mt
     #define ISECT_NAME "mt"
     #define ISECT_RUNNING_MIN false
