@@ -10,36 +10,46 @@ can download from the following location:
 
     https://github.com/bjourne/c-examples
 
-Then to configure the project, run:
+These first has to be compiled. See the compilation instructions in
+that project.
 
-    $ ./waf configure
+To configure this project, first run:
+
+    $ python waf configure
 
 The `--isect` and `--shading` options can be passed to control the
-compilation of the toy raytracer. Then build: using:
+compilation of the toy raytracer. Then build using:
 
-    $ ./waf build
+    $ python waf build
 
-If you decide to install the libraries into a non-standard location,
-you will have to specify their paths using environment variables:
+If the libraries from the `c-libraries` project were installed in a
+non-standard location, their paths has to be specified using
+environment variables. On Unix:
 
     $ CFLAGS="-I/prefix/include" LD_LIBRARY_PATH="/prefix/lib" \
         LIBRARY_PATH=$LD_LIBRARY_PATH ./waf configure build
 
-Where `prefix` is the file system prefix in which they were
-installed.
+On Windows, when compiling with Microsoft Visual C, the environment variables would be set like this:
+
+    > set CFLAGS=/IC:\\path\\here\\c-examples\\libraries
+    > set LDFLAGS=/LIBPATH:C:\\path\\here\\c-examples\\build
+    > ./waf configure build
 
 ## Usage
 
 If you managed to compile the program, you can run it with:
 
-    $ LD_LIBRARY_PATH=/prefix/lib ./build/rt
+    > build/rt.exe
     usage: raytrace mesh-file image width[0-2048] height[0-2048] scale tx ty tz
 
-Where `prefix` is the aforementioned library prefix. To actually
-render something, invoke the program like this:
+To actually render something, invoke the program using:
 
-    $ LD_LIBRARY_PATH=/prefix/lib ./build/rt bunny.obj out.ppm 320 200 50.0 0 0 0
-    mt bunny.obj 320 200 3.86878 487
+    > build/rt.exe bunny.obj out.ppm 320 200 64.0 5 3 0
+    mt bunny.obj bunny.obj 320 200 6.44396 15341
+
+It will produce a rendering of the mesh in PPM format. The Bunny model
+can be downloaded
+[here](https://graphics.stanford.edu/~mdfisher/Data/Meshes/bunny.obj).
 
 ## Images
 
