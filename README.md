@@ -3,33 +3,37 @@ A dirt simple raytracer written in C
 
 ## Compilation
 
-The project is built using the
-[WAF](https://github.com/waf-project/waf) tool. It requires you to
-have Python installed. It also depends on my C libraries, which you
-can download from the following location:
+The project is built with the
+[WAF](https://github.com/waf-project/waf) tool which requires Python
+3. It also depends on my C libraries, which can be found here:
 
     https://github.com/bjourne/c-examples
 
 These first has to be compiled. See the compilation instructions in
 that project.
 
-To configure this project, first run:
+After that is done, this project can be configured using:
 
     $ python waf configure
 
-The `--isect` and `--shading` options can be passed to control the
-compilation of the toy raytracer. Then build using:
+The `--isect` and `--shading` options can be passed to select which
+intersection algorith and shader the raytracer will use. Then built
+using:
 
     $ python waf build
 
 If the libraries from the `c-libraries` project were installed in a
-non-standard location, their paths has to be specified using
-environment variables. On Unix:
+non-standard location, or not installed, their paths has to be
+specified using environment variables.
 
-    $ CFLAGS="-I/prefix/include" LD_LIBRARY_PATH="/prefix/lib" \
-        LIBRARY_PATH=$LD_LIBRARY_PATH ./waf configure build
+On Linux:
 
-On Windows, when compiling with Microsoft Visual C, the environment variables would be set like this:
+    $ CFLAGS="-I/path/to/c-examples/libraries" \
+        LDFLAGS="-L/path/to/examples/build" \
+        ./waf configure build
+
+It works similarily on Windows except that double escape characters
+has to be used in paths:
 
     > set CFLAGS=/IC:\\path\\here\\c-examples\\libraries
     > set LDFLAGS=/LIBPATH:C:\\path\\here\\c-examples\\build
