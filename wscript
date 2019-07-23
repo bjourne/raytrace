@@ -17,7 +17,8 @@ def configure(ctx):
     ctx.load('compiler_c')
     ctx.define('ISECT_METHOD', ctx.options.isect, quote = False)
     ctx.define('SHADING_STYLE', ctx.options.shading, quote = False)
-    #ctx.check(lib = 'm')
+    # Required on Linux, maybe not on Windows.
+    ctx.check(lib = 'm')
     ctx.check(lib = 'datatypes')
     ctx.check(lib = 'linalg')
     ctx.check(lib = 'isect')
